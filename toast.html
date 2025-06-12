@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Toast</title>
+</head>
+<style>
+
+    body{
+       position:relative;
+       height: 100vh;
+       margin: 0;
+       display: grid;
+       place-items: center;
+       background: none;
+    }
+    body::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image: url("images/Bread.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background 0.5s,transform 0.3s;
+        background-attachment: fixed;
+        opacity: 0.6;
+        z-index: -1;
+    }
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+    }
+    li{
+        font-size: 4rem;
+        margin: 20px;
+        display: block;
+        text-align: center;
+        opacity: 0.9;
+        transition:
+         background 0.5s,
+         transform 0.9s;
+        cursor: pointer;
+    }
+    li:hover{
+        transform: translateX(-70px);  
+        transition: transform 0.3s;
+    }
+    li:active{
+        transform: scale(0.8);
+    }
+    p{
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+        margin: 10px;
+    }
+    a{
+        text-decoration: none;
+        font-size: 4rem;
+        color: black;
+        text-align: center;
+        display: block;
+        margin: 1rem auto;
+
+    }
+    a:hover{
+        transform: scale(1.5) rotate(360deg);
+        transition: transform 0.5s;
+    }
+    a:active{
+        transform: scale(0.8);
+    }
+    </style>
+<body>
+    <h1>So you like all kind of Breads!!</h1>
+    <ul>
+        <li>🍞</li>
+        <li>🥐</li>
+        <li>🥖</li>
+        <li>🫓</li>
+        <li>🥨</li>
+    <h2>I think this one you can eat it as you please</h2>
+
+    
+</body>
+</html>

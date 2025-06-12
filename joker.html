@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEEEAAAHHHH</title>
+</head>
+<body>
+   <div class="text">🤨
+    <p>⚠️YOU ARE...</p>
+    <p>
+        <span class="word wisteria">Caught</span>
+        <span class="word belize">curious.</span>
+        <span class="word pomegranate">Freaky.</span>
+        <span class="word green">Nasty.</span>
+      
+    </p>
+   </div>
+    <span class="crazy-emoji emoji1">🤣</span>
+    <span class="crazy-emoji emoji2">🤣</span>
+    <span class="crazy-emoji emoji3">🤣</span>
+    <span class="crazy-emoji emoji4">🤣</span>
+    <span class="crazy-emoji emoji5">🤣</span>
+   
+    <style>
+        body{
+            overflow: hidden;
+            font-family: 'Open Sans',sans-serif;
+            background: #2b0f6b;
+            }
+            .text{
+                font-size: 4rem;
+                position: absolute;
+                width:450px;
+                left: 50%;
+                margin-left: -250px;
+                height: 40px;
+                top: 50%;
+                margin-top:20px;
+             
+            }
+            p{
+                display: inline-block;
+                vertical-align: top;
+                margin: 0;
+            }
+            .word{
+                position: absolute;
+                width: 200px;
+                opacity: 1;
+                animation: rotate-word 5s infinite linear;
+            }
+            @keyframes rotate-word{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(360deg);}
+            }
+            .word.wisteria { animation-delay: 0s; }
+            .word.belize { animation-delay: 2s; }
+            .word.pomegranate { animation-delay: 4s; }
+            .word.green { animation-delay: 6s; }
+            .word.midnight { animation-delay: 8s; }
+
+            @keyframes rotate-word {
+                0% { opacity: 0; }
+                5% { opacity: 0.8; }
+                20% { opacity: 0.9; }
+                25% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+           
+
+            .wisteria {
+            color: #8e44ad;
+            }
+
+            .belize {
+            color: #2980b9;
+            }
+
+            .pomegranate {
+            color: #c0392b;
+            }
+
+            .green {
+            color: #16a085;
+            }
+
+        .crazy-emoji{
+            font-size: 10rem;
+            position: absolute;
+            animation-name: spin;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            opacity: 0.8;
+            }
+            
+        .emoji1 { animation: float1 6s infinite linear alternate; left: 5%; top: 15%;}
+        .emoji2 { animation: float2 7s infinite linear alternate;left: 90%; top: 15%;}
+        .emoji3 { animation: float3 8s infinite linear alternate; left: 50%; top: 5%;}
+        .emoji4 { animation: float4 9s infinite linear alternate;left: 10%; top: 80%;}
+        .emoji5 { animation: float5 10s infinite linear alternate; left: 90%; top: 80%;}
+
+            @keyframes spin{
+                0%{transform: rotate(0deg);}
+                100%{transform: rotate(360deg);}
+            }
+
+        @keyframes spin-center {
+                0% { transform: translate(-50%, -50%) rotate(0deg);}
+                100% { transform: translate(-50%, -50%) rotate(360deg);}
+            }
+        @keyframes float1 {
+                0% { transform: translate(0,0) rotate(0deg);}
+                25% { transform: translate(30vw, 10vh) rotate(30deg);}
+                50% { transform: translate(10vw, 40vh) rotate(-30deg);}
+                75% { transform: translate(-20vw, 20vh) rotate(15deg);}
+                100% { transform: translate(0,0) rotate(0deg);}
+   }
+        @keyframes float2 {
+                0% { transform: translate(0,0) rotate(0deg);}
+                20% { transform: translate(-15vw, 20vh) rotate(-20deg);}
+                50% { transform: translate(-30vw, 30vh) rotate(40deg);}
+                80% { transform: translate(10vw, -10vh) rotate(-10deg);}
+                100% { transform: translate(0,0) rotate(0deg);}
+            }
+        @keyframes float3 {
+                0% { transform: translate(0,0) rotate(0deg);}
+                30% { transform: translate(20vw, -20vh) rotate(20deg);}
+                60% { transform: translate(-10vw, 30vh) rotate(-25deg);}
+                100% { transform: translate(0,0) rotate(0deg);}
+            }
+        @keyframes float4 {
+                0% { transform: translate(0,0) rotate(0deg);}
+                40% { transform: translate(-25vw, -15vh) rotate(10deg);}
+                70% { transform: translate(15vw, 25vh) rotate(-30deg);}
+                100% { transform: translate(0,0) rotate(0deg);}
+            }
+        @keyframes float5 {
+                0% { transform: translate(0,0) rotate(0deg);}
+                50% { transform: translate(35vw, -25vh) rotate(45deg);}
+                100% { transform: translate(0,0) rotate(0deg);}
+            }
+    </style>
+</body>
+</html>

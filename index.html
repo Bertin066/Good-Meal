@@ -1,0 +1,226 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal</title>
+    <style>
+    body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background:none;
+    font-family: 'Arial', sans-serif;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/Rabbit.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.6;
+    z-index: -1;
+}
+.melting-text-container{
+    margin: 70px;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.melting-text{
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    background: linear-gradient(90deg,#ff6f61,#ffbd44,#ff6f61);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: melt 3s infinite alternate;
+}
+.melting-text::before{
+    content: 'YOUR FAVORITE MEAL';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,#1c97b6,#ffbd44,#6179ff);
+   background-clip:text;
+    color: transparent;
+    animation: drip 3s infinite alternate;
+}
+.melting-text::after{ 
+    filter: blur(1px);
+    opacity: 0.5;
+}
+@keyframes melt{
+    0%{
+        filter: blur(1px);
+        transform:scaleY(1) translateY(50px);
+    }
+    50%{
+        filter:none;
+        transform: scaleY(1);
+    }
+    100%{
+        filter: blur(1px);
+        transform: scaleY(1);
+    }
+}
+@keyframes drip{
+    0%,100%{
+        transform: scaleY(1.5);
+        opacity: 1;
+        filter: blur(1px);
+    }
+    50%{
+        transform: scaleY(1) translateY(40px);
+        opacity: 0.5;
+    }
+}
+    .toast{
+        cursor: pointer;
+        font-size: 5rem;
+        margin: 20px;
+    }
+    .snack{
+        cursor: pointer;
+        font-size: 5rem;
+        margin: 20px;
+    }
+    
+    button{
+        font-size: large;
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: #ffb347;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s,transform 0.3s;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    button:hover{
+        background-color: #ffb347;
+        transform: scale(1.5);
+    
+    }
+    button:active{
+background-color: #ffb347;
+        transform: scale(0.95);
+    }
+    h1{
+        text-transform: uppercase;
+        font-size: 3rem;
+        text-align: center;
+        white-space: nowrap;
+        text-decoration:wavy;
+        margin: 20px;
+        padding: 20px;
+    }
+    h2{
+        text-align: center;
+        font-size: 2rem;
+        text-decoration:none;
+   
+    }
+    .jok{
+        font-size: 5rem;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+    }
+    a{
+        text-decoration: none;
+        font-size: 3rem;
+        color: black;
+        text-align: center;
+        display: block;
+        margin: 1rem auto;
+        opacity: 1;
+        transition: background 0.3s, transform 0.3s;
+    }
+    a:hover{
+        transform: scale(2.05) rotate(360deg);
+        transition: transform 0.8s;
+    }
+    a:active{
+        transform: scale(2.03);
+    }
+    img{
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
+        transition: background ;
+    }
+    label{
+        margin: 10px;
+        height: 10px;
+
+    }
+    input{
+        border:chocolate;
+        border-radius: 8px;
+        height:30px;
+
+    }
+
+ </style>
+ </head>
+ 
+ <body>
+    <div class="melting-text-container">
+        <h1 class="melting-text">Your Favorite Meal</h1>
+    </div>
+    <h2>We are really good at eating </h2>
+    <p>
+        <span class="toast">🍞</span>
+        <span class="snack">🍫</span>
+    </p>
+    <label for="nameInput">Enter your name:</label>
+    <input type="text" id="nameInput" name="name">
+    <button onclick="displayName()">Submit</button>
+    <p id="displayNameArea"></p>
+    <script>
+        function displayName(){
+            const name = document.getElementById("nameInput").value;
+            const displayNameArea = document.getElementById("displayNameArea");
+            if(name === ""){
+                alert("😑I Told you to enter your name 😡");
+                return;
+            }
+                alert("Yo! Gotcha "+name+" You are a big eater 🤤🤤");
+            }                  
+    </script>
+    <h2>click on one and left the other one for me don't be greedy:</h2>
+    <a href="toast.html">🍞</a>
+    <h2>or</h2>
+    <a href="snack.html">🍫</a>
+    <hr>
+    <h2>This squirrel is a big eater don't you think??</h2>
+    <p class="com">Don't click the Icon</p>
+    <a class="jok" href="joker.html">🔞</a>
+ </body>
+ </html>
+
+
+
+
+
+
+
+
+
+
+
+  

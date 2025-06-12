@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Snack</title>
+</head>
+<style>
+    body{
+        position: relative;
+        height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        background: none;  
+    }
+    body::before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; 
+        height: 100vh;
+        background-image: url("images/choco.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background 0.5s,transform 0.3s;
+        background-attachment: fixed;
+        opacity: 0.6;
+        z-index: -1;
+    }
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    li{
+        font-size: 4rem;
+        margin: 30px;;
+        display: block;
+        text-align: center;
+        opacity: 0.9;
+        transition:
+         background 0.5s,
+         transform 0.9s;
+        cursor:pointer;
+        
+    }
+    li:hover{
+        transform: translateX(70px);
+        transition: transform 0.3s;
+    }
+    li:active{
+        transform: scale(0.8);
+    }
+    h2{
+        text-align: center;
+        font-size: 2rem;
+        text-decoration:dashed;
+        padding: 30px;
+    }
+    </style>
+<body>
+    <h1>Oh!So you are more sweet things</h1>
+    <ul>
+        <li>🍨</li>
+        <li>🍰</li>
+        <li>🍫</li>
+        <li>🍩</li>
+        <li>🍪</li>
+    </ul>
+    <h2>Just becarefull with your Teeth 🦷😬!!</h2>
+</body>
+</html>
